@@ -1,0 +1,744 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lime.Messaging</name>
+    </assembly>
+    <members>
+        <member name="T:Lime.Messaging.Contents.BitmapImage">
+            <summary>
+            Represents a flat text content
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Contents.BitmapImage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Contents.BitmapImage"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Contents.BitmapImage.Image">
+            <summary>
+            The bitmap image
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Lime.Messaging.Contents.BitmapImage.ToString" -->
+        <member name="M:Lime.Messaging.Contents.BitmapImage.Parse(System.String)">
+            <summary>
+            Parses the string to a 
+            PlainText instance.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lime.Messaging.Contents.ChatState">
+            <summary>
+            Allows the chat clients to exchange 
+            information about conversation events.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Contents.ChatState.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Contents.ChatState"/> class.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Contents.ChatState.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:Lime.Messaging.Contents.ChatStateEvent">
+            <summary>
+            The current chat state.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Contents.ChatStateEvent.Starting">
+            <summary>
+            The other chat party started 
+            a new chat a conversation.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Contents.ChatStateEvent.Composing">
+            <summary>
+            The other party is typing.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Contents.ChatStateEvent.Paused">
+            <summary>
+            The other party was 
+            typing but stopped.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Contents.ChatStateEvent.Deleting">
+            <summary>
+            The other party is 
+            deleting a text.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Contents.ChatStateEvent.Gone">
+            <summary>
+            The other party 
+            left the conversation.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Contents.PlainText">
+            <summary>
+            Represents a flat text content
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Contents.PlainText.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Contents.PlainText"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Contents.PlainText.Text">
+            <summary>
+            Text of the message
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Contents.PlainText.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:Lime.Messaging.Contents.PlainText.Parse(System.String)">
+            <summary>
+            Parses the string to a 
+            PlainText instance.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Account">
+            <summary>
+            Represents an user account information.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Account.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Account"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.FullName">
+            <summary>
+            The user full name.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.Address">
+            <summary>
+            The user street address.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.City">
+            <summary>
+            The user city.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.Email">
+            <summary>
+            The user e-mail address.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.PhoneNumber">
+            <summary>
+            The user phone number.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.PhotoUri">
+            <summary>
+            The user photo URI.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.CellPhoneNumber">
+            <summary>
+            The user cellphone number
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.IsTemporary">
+            <summary>
+            Indicates that the account is temporary is valid only in the current session.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.Password">
+            <summary>
+            Base64 representation of the account password.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.OldPassword">
+            <summary>
+            Base64 representation of the account password. 
+            Mandatory in case of updating account password.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.AccessKey">
+            <summary>
+            Access key for updating the account without knowing the old password.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.InboxSize">
+            <summary>
+            Size of account inbox for storing offline messages.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.AllowAnonymousSender">
+            <summary>
+            Indicates if this account allows receive messages from anonymous users.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.AllowUnknownSender">
+            <summary>
+            Indicates if this account allows receive messages from users that are not in the account contact list.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.StoreMessageContent">
+            <summary>
+            Indicates if the content of messages from this account should be stored in the server. 
+            Note that for offline messages, this will always happens.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.AlternativeAccount">
+            <summary>
+            Alternative account address.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Account.PublishToDirectory">
+            <summary>
+            Indicates if the account info should be published to the domain directory.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Capability">
+            <summary>
+            Represents the capabilities
+            of the nodes of the network
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Capability.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Capability"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Capability.ContentTypes">
+            <summary>
+            Indicates the message content types
+            that the session node is able to handle.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Capability.ResourceTypes">
+            <summary>
+            Indicates the command resource types 
+            that the session node is able to handle.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Contact">
+            <summary>
+            Represents a contact information.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Contact.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Contact"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Contact.Identity">
+            <summary>
+            The identity of the contact, 
+            in the name@domain format.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Contact.Name">
+            <summary>
+            The name of the contact. 
+            This information is only visible by the roster owner.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Contact.IsPending">
+            <summary>
+            Determines if the contact is pending for 
+            acceptance by the roster owner. 
+            The default value is false.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Contact.SharePresence">
+            <summary>
+            Indicates if the roster owner wants to share 
+            presence information with the contact. If true, 
+            the server provides a get delegation permission 
+            to the contact identity into the roster owner 
+            presence resource. The default value is true.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Contact.ShareAccountInfo">
+            <summary>
+            Indicates if the roster owner wants to share account 
+            information with the contact. If true, the server provides 
+            a get delegation permission to the contact identity 
+            into the roster owner account resource. 
+            The default value is true.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Contact.Priority">
+            <summary>
+            Indicates the contact priority.
+            </summary>
+            <value>
+            The priority.
+            </value>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Contact.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Lime.Messaging.Resources.Contact.Equals(System.Object)" -->
+        <member name="M:Lime.Messaging.Resources.Contact.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Delegation">
+            <summary>
+            Represents a delegation to send envelopes on behalf of another 
+            identity of the same network. The delegation can be constrained to 
+            specific envelope types and/or destinations. 
+            It is associated to the issuer's session and can 
+            be revoked through a delete command.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Delegation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Delegation"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Delegation.Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Delegation.Destinations">
+            <summary>
+            Array of destinations that the delegated 
+            identity can originate envelopes on behalf. 
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Delegation.Commands">
+            <summary>
+            Command definitions for delegation. 
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Delegation.Messages">
+            <summary>
+            Message definitions for delegation. 
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Group">
+            <summary>
+            Allows the nodes to manage the groups that they owns or participates.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Group.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Group"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.Identity">
+            <summary>
+            Identity of the group, in the group-id@groups.domain.com format. 
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.Name">
+            <summary>
+            Name of the group.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.Type">
+            <summary>
+            Type of the group.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.PhotoUri">
+            <summary>
+            The group photo URI.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.Creator">
+            <summary>
+            The group creator identity.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.Created">
+            <summary>
+            The group creation date.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Group.MembersUri">
+            <summary>
+            Members uri of the contact group. 
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupType.Temporary">
+            <summary>
+            The group exists while the owner session that created it is active. 
+            This type of group is useful for mass message sending, since the groups 
+            application is optimized to send large amounts of messages. 
+            The temporary groups are private.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupType.Private">
+            <summary>
+            The group is not discoverable and someone 
+            can join only if is invited by owner or a moderator.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupType.Public">
+            <summary>
+            Any authenticated node in the domain can join the group.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.GroupMember">
+            <summary>
+            Represents a member of a group.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.GroupMember.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.GroupMember"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.GroupMember.Address">
+            <summary>
+            The address of the member, in the name@domain/instance format,
+            being the instance information optional.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.GroupMember.Role">
+            <summary>
+            The role of the identity in the group. 
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.GroupMemberRole">
+            <summary>
+            Enumerates the roles that the members 
+            can have in a group.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupMemberRole.Member">
+            <summary>
+            The member can send and receive 
+            messages to the group. 
+            It's the default value.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupMemberRole.Listener">
+            <summary>
+            The member can only receive messages 
+            from the group, and doesn't have permission to send.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupMemberRole.Moderator">
+            <summary>
+            The member can send and receive messages to 
+            the group and can kick and 
+            ban contacts from it.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.GroupMemberRole.Owner">
+            <summary>
+            The owner have the permission to manage moderators, 
+            change and delete the group.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Ping">
+            <summary>
+            Allows the nodes to test 
+            the network connectivity.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Ping.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Ping"/> class.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Presence">
+            <summary>
+            Represents the availability status of a node in a network. 
+            A node can only receive envelopes from another nodes in the network if it sets its presence to an available status (except from the server, who always knows if a node is available or node, since this information is enforced by the existing session). 
+            In a new session, the node starts with an unavailable status.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Presence.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Presence"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.Status">
+            <summary>
+            The node presence status.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.Message">
+            <summary>
+            A status message associated to the presence status.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.RoutingRule">
+            <summary>
+            Rule to the server route envelopes addressed to the identity. 
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.LastSeen">
+            <summary>
+            The date of the last known presence status for the node.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.Priority">
+            <summary>
+            The value of the priority of the presence.
+            This value can affect the way the envelopes are routed to the current session.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.FilterByDistance">
+            <summary>
+            If true, indicates that the delivery of envelopes for the current session should only occurs if the distance from the originator is the smallest among the resolved routes with this setting. 
+            This configuration is not exclusive, so if there's more than one route with the same smallest distance, these sessions should receive the envelopes.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.RoundRobin">
+            <summary>
+            If true, indicates that the delivery of envelopes for the current session should be distributed by using the round-robin strategy between the resolved routes with this setting.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Presence.Instances">
+            <summary>
+            Present instances for a identity.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.RoutingRule">
+            <summary>
+            Defines the envelope routing rules.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.RoutingRule.Instance">
+            <summary>
+            Only deliver envelopes addressed to the current session instance (name@domain/instance).
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.RoutingRule.Identity">
+            <summary>
+            Deliver envelopes addressed to the current session instance 
+            (name@domain/instance) and envelopes addressed to the 
+            identity (name@domain)
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.RoutingRule.IdentityByDistance">
+            <summary>
+            Deliver envelopes addressed to the current session 
+            instance (name@domain/instance) and envelopes addressed 
+            to the identity (name@domain) if the distance from the 
+            originator is the smallest among the available 
+            nodes of the identity with this setting.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.RoutingRule.Promiscuous">
+            <summary>
+            Deliver any envelopes addressed to the identity name@domain, 
+            including the envelopes addressed to any specific instance.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.RoutingRule.Domain">
+            <summary>
+             Deliver envelopes addressed to the current session 
+            instance (name@domain/instance) and envelopes addresses to the node domain.
+            This rule is intended to be used only for external domain authorities
+            (gateways) and sub-domain authorities (applications).
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.RoutingRule.DomainByDistance">
+            <summary>
+            Deliver envelopes addressed to the current session 
+            instance (name@domain/instance) and envelopes addresses to the node domain
+            if the distance from the originator is the smallest among the available 
+            nodes of the domain with this setting.
+            This rule is intended to be used only for external domain authorities
+            (gateways) and sub-domain authorities (applications)
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.PresenceStatus">
+            <summary>
+            Possible presence status values
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.PresenceStatus.Unavailable">
+            <summary>
+            The node is not available for messaging and should not receive any envelope by any node, except by the connected server.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.PresenceStatus.Available">
+            <summary>
+            The node is available for messaging and envelopes can be routed to the node according to the defined routing rule.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.PresenceStatus.Busy">
+            <summary>
+            The node is available but the senders should notice that it is busy and doesn't want to the disturbed 
+            or it is on heavy load and don't want to receive any envelope.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.PresenceStatus.Away">
+            <summary>
+            The node is available but the senders should notice that it may not be reading or processing the received envelopes.
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.PresenceStatus.Invisible">
+            <summary>
+            The node is available for messaging but the actual stored presence value is unavailable.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Quota">
+            <summary>
+            Allows the nodes to manage the 
+            session envelope quota configuration.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Quota.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Quota"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Quota.Threshold">
+            <summary>
+            The number of envelopes that the node
+            can originate in the current session.       
+            If the value is 0 or is
+            not defined, this limit is unbounded. 
+            If a session exceeds the limit, it can be finished by the server.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Quota.Throughput">
+            <summary>
+            Indicates the cap of envelopes per second that the 
+            session can send and receive. If the value is 0 or is
+            not defined, this capability is unbounded. 
+            If a session exceeds the limit, it can be finished by the server.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Quota.MaxEnvelopeSize">
+            <summary>
+            The uncompressed size limit of the envelopes that 
+            can be sent in the session. If the value is 0 or is 
+            not defined, this capability is unbounded. 
+            If a envelope sent in the session exceeds the limit, it can be finished 
+            by the server.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.Receipt">
+            <summary>
+            Represents the message events 
+            that should generate receipts 
+            (notifications) for the node in the 
+            current session.
+            </summary>
+        </member>
+        <member name="M:Lime.Messaging.Resources.Receipt.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Messaging.Resources.Receipt"/> class.
+            </summary>
+        </member>
+        <member name="P:Lime.Messaging.Resources.Receipt.Events">
+            <summary>
+            Indicates which message events 
+            that the node is receiving
+            in the current session.
+            </summary>
+        </member>
+        <member name="T:Lime.Messaging.Resources.UriTemplates">
+            <summary>
+            Stores the Uri templates
+            for the common protocol resources
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.ACCOUNT">
+            <summary>
+            Template for the
+            account resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.PRESENCE">
+            <summary>
+            Template for the
+            presence resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.CONTACTS">
+            <summary>
+            Template for the
+            contacts resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.CONTACT">
+            <summary>
+            Template for a
+            specific contact resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.GROUPS">
+            <summary>
+            Template for the
+            groups resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.GROUP">
+            <summary>
+            Template for a
+            specific group resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.GROUP_MEMBERS">
+            <summary>
+            Template for a
+            specific group members
+            resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.GROUP_MEMBER">
+            <summary>
+            Template for a 
+            specific group member
+            resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.GROUP_MEMBER_INSTANCE">
+            <summary>
+            Template for a 
+            specific group member
+            resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.PING">
+            <summary>
+            Template for the
+            ping resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.RECEIPT">
+            <summary>
+            Template for the
+            receipt resource
+            </summary>
+        </member>
+        <member name="F:Lime.Messaging.Resources.UriTemplates.QUOTA">
+            <summary>
+            Template for the
+            quota resource.
+            </summary>
+        </member>
+    </members>
+</doc>

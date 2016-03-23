@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lime.Transport.Tcp</name>
+    </assembly>
+    <members>
+        <member name="T:Lime.Transport.Tcp.ITcpClient">
+            <summary>
+            Encapsulates the TcpClient methods used
+            by the transport.
+            </summary>
+        </member>
+        <member name="M:Lime.Transport.Tcp.ITcpClient.GetStream">
+            <summary>
+            Returns the System.Net.Sockets.NetworkStream used to send and receive data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lime.Transport.Tcp.ITcpClient.ConnectAsync(System.String,System.Int32)">
+            <summary>
+            Connects the client to the specified port on the specified host.
+            </summary>
+            <param name="address">The DNS name of the remote host to which you intend to connect.</param>
+            <param name="port">The portThe port number of the remote host to which you intend to connect.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Lime.Transport.Tcp.ITcpClient.Connected">
+            <summary>
+            Gets a value indicating whether the underlying System.Net.Sockets.Socket
+            for a System.Net.Sockets.TcpClient is connected to a remote host.
+            </summary>
+            <value>
+              <c>true</c> if connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Lime.Transport.Tcp.ITcpClient.Close">
+            <summary>
+            Disposes this System.Net.Sockets.TcpClient instance and requests that the
+            underlying TCP connection be closed.
+            </summary>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpClientAdapter.GetStream">
+            <summary>
+            Returns the System.Net.Sockets.NetworkStream used to send and receive data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpClientAdapter.ConnectAsync(System.String,System.Int32)">
+            <summary>
+            Connects the client to the specified port on the specified host.
+            </summary>
+            <param name="host"></param>
+            <param name="port">The portThe port number of the remote host to which you intend to connect.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Lime.Transport.Tcp.TcpClientAdapter.Connected">
+            <summary>
+            Gets a value indicating whether the underlying System.Net.Sockets.Socket
+            for a System.Net.Sockets.TcpClient is connected to a remote host.
+            </summary>
+            <value>
+              <c>true</c> if connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Lime.Transport.Tcp.TcpTransport">
+            <summary>
+            Provides the messaging protocol transport for TCP connections.
+            </summary>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,Lime.Protocol.Network.ITraceWriter,System.Net.Security.RemoteCertificateValidationCallback)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Transport.Tcp.TcpTransport"/> class.
+            </summary>
+            <param name="clientCertificate"></param>
+            <param name="bufferSize">Size of the buffer.</param>
+            <param name="traceWriter">The trace writer.</param>
+            <param name="serverCertificateValidationCallback">A callback to validate the server certificate in the TLS authentication process.</param>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.#ctor(Lime.Protocol.Serialization.IEnvelopeSerializer,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,Lime.Protocol.Network.ITraceWriter,System.Net.Security.RemoteCertificateValidationCallback)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Transport.Tcp.TcpTransport"/> class.
+            </summary>
+            <param name="envelopeSerializer">The envelope serializer.</param>
+            <param name="clientCertificate">The client certificate.</param>
+            <param name="bufferSize">Size of the buffer.</param>
+            <param name="traceWriter">The trace writer.</param>
+            <param name="serverCertificateValidationCallback">A callback to validate the server certificate in the TLS authentication process.</param>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.#ctor(Lime.Transport.Tcp.ITcpClient,Lime.Protocol.Serialization.IEnvelopeSerializer,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,Lime.Protocol.Network.ITraceWriter,System.Net.Security.RemoteCertificateValidationCallback)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Transport.Tcp.TcpTransport"/> class.
+            </summary>
+            <param name="tcpClient">The TCP client.</param>
+            <param name="envelopeSerializer">The envelope serializer.</param>
+            <param name="hostName">Name of the host.</param>
+            <param name="clientCertificate">The client certificate.</param>
+            <param name="bufferSize">Size of the buffer.</param>
+            <param name="traceWriter">The trace writer.</param>
+            <param name="serverCertificateValidationCallback">A callback to validate the server certificate in the TLS authentication process.</param>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.#ctor(Lime.Transport.Tcp.ITcpClient,Lime.Protocol.Serialization.IEnvelopeSerializer,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,Lime.Protocol.Network.ITraceWriter,System.Net.Security.RemoteCertificateValidationCallback)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Transport.Tcp.TcpTransport"/> class.
+            This constructor is used by the <see cref="T:Lime.Transport.Tcp.TcpTransportListener"/> class.
+            </summary>
+            <param name="tcpClient">The TCP client.</param>
+            <param name="envelopeSerializer">The envelope serializer.</param>
+            <param name="serverCertificate">The server certificate.</param>
+            <param name="bufferSize">Size of the buffer.</param>
+            <param name="traceWriter">The trace writer.</param>
+            <param name="clientCertificateValidationCallback">A callback to validate the client certificate in the TLS authentication process.</param>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.#ctor(Lime.Transport.Tcp.ITcpClient,Lime.Protocol.Serialization.IEnvelopeSerializer,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Certificate2,System.String,System.Int32,Lime.Protocol.Network.ITraceWriter,System.Net.Security.RemoteCertificateValidationCallback,System.Net.Security.RemoteCertificateValidationCallback)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lime.Transport.Tcp.TcpTransport"/> class.
+            </summary>
+            <param name="tcpClient">The TCP client.</param>
+            <param name="envelopeSerializer">The envelope serializer.</param>
+            <param name="serverCertificate">The server certificate.</param>
+            <param name="clientCertificate">The client certificate.</param>
+            <param name="hostName">Name of the host.</param>
+            <param name="bufferSize">Size of the buffer.</param>
+            <param name="traceWriter">The trace writer.</param>
+            <param name="serverCertificateValidationCallback">The server certificate validation callback.</param>
+            <param name="clientCertificateValidationCallback">The client certificate validation callback.</param>
+            <exception cref="T:System.ArgumentNullException">
+            tcpClient
+            or
+            envelopeSerializer
+            </exception>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.PerformOpenAsync(System.Uri,System.Threading.CancellationToken)">
+            <summary>
+            Opens the transport connection with the specified Uri and begins to read from the stream.
+            </summary>
+            <param name="uri"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.SendAsync(Lime.Protocol.Envelope,System.Threading.CancellationToken)">
+            <summary>
+            Sends an envelope to the connected node.
+            </summary>
+            <param name="envelope">Envelope to be transported</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.ReceiveAsync(System.Threading.CancellationToken)">
+            <summary>
+            Reads one envelope from the stream.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.PerformCloseAsync(System.Threading.CancellationToken)">
+            <summary>
+            Closes the transport.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.GetSupportedEncryption">
+            <summary>
+            Enumerates the supported encryption options for the transport.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.SetEncryptionAsync(Lime.Protocol.SessionEncryption,System.Threading.CancellationToken)">
+            <summary>
+            Defines the encryption mode for the transport.
+            </summary>
+            <param name="encryption"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException"></exception>        
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransport.AuthenticateAsync(Lime.Protocol.Identity)">
+            <summary>
+            Authenticate the identity in the transport layer.
+            </summary>
+            <param name="identity">The identity to be authenticated</param>
+            <returns>
+            Indicates if the identity is authenticated
+            </returns>
+        </member>
+        <member name="P:Lime.Transport.Tcp.TcpTransportListener.ListenerUris">
+            <summary>
+            Gets the transport 
+            listener URIs.
+            </summary>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransportListener.StartAsync">
+            <summary>
+            Start listening connections.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">listenerUri</exception>
+            <exception cref="T:System.ArgumentException">
+            Invalid URI scheme. The expected value is 'net.tcp'.
+            or
+            Could not resolve the IPAddress of the hostname
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The listener is already active</exception>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransportListener.AcceptTransportAsync(System.Threading.CancellationToken)">
+            <summary>
+            Accepts a new transport connection
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">The listener was not started. Calls StartAsync first.</exception>
+        </member>
+        <member name="M:Lime.Transport.Tcp.TcpTransportListener.StopAsync">
+            <summary>
+            Stops the tranport listener
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lime.Transport.JsonBuffer">
+            <summary>
+            Provides a buffer with a method for JSON extraction.
+            </summary>
+        </member>
+        <member name="M:Lime.Transport.JsonBuffer.TryExtractJsonFromBuffer(System.Byte[]@)">
+            <summary>
+            Try to extract a JSON document from the buffer, based on the brackets count.
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
