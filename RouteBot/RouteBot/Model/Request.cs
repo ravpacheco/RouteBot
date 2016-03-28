@@ -16,6 +16,8 @@ namespace RouteBot.Model
     {
         Help,
         Route,
+        Location,
+        ListLocation,
         Error
     }
 }

@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Location.cs" />
     <Compile Include="Model\Request.cs" />
     <Compile Include="PlainTextMessageReceiver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
