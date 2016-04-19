@@ -20,7 +20,7 @@ namespace RouteBot
         private static readonly MediaType ResponseMediaType = new MediaType("application", "vnd.omni.text", "json");
         private static readonly string GoogleMapsAccessKey = "AIzaSyCenpBUF5QaHSAaGcrjbeq3oxf8uK_uR7Y";
 
-        private static List<Location> LocationsDb = new List<Location>();
+        private static List<Model.Location> LocationsDb = new List<Model.Location>();
 
         private HttpClient _webClient;
         private HttpClient WebClient
@@ -145,7 +145,7 @@ namespace RouteBot
 
         private async Task ProcessLocationCommand(Message message, Request request)
         {
-            var location = new Location
+            var location = new Model.Location
             {
                 Owner = message.From.ToIdentity(),
                 Tag = request.Content["tag"].ToLower(),
